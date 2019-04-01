@@ -7,8 +7,6 @@ RUN cd /api/vendors && \
     npm install --production --registry https://registry.npm.taobao.org
 
 FROM node:11
-COPY sources.list   /etc/apt/sources.list
-RUN apt-get update &&  apt-get install -y net-tools procps curl wget vim telnet cron
 
 MAINTAINER ryan.miao
 ENV TZ="Asia/Shanghai" HOME="/"
