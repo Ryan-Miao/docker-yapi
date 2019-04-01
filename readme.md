@@ -66,7 +66,7 @@ sh build.sh 1.5.10
 
 ### Step3: run yapi and init
 
-init db
+start with db initializtion
 
 ```
  docker run -d -p 3001:3001 --name yapi --net tools-net --ip 172.18.0.3 yapi --initdb
