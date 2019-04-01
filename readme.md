@@ -72,7 +72,16 @@ docker run -d -p 3001:3001 --name yapi --net tools-net --ip 172.18.0.3 yapi
 ```
 
 
+### Step4: chek
 
+```
+ docker logs --tail 10 yapi
+log: mongodb load success...
+初始化管理员账号成功,账号名："ryan.miao@demo.com"，密码："ymfe.org"
+log: 服务已启动，请打开下面链接访问: 
+http://127.0.0.1:3001/
+log: mongodb load success...
+```
 
 完整部署过程： https://www.cnblogs.com/woshimrf/p/docker-install-yapi.html
 
