@@ -1,0 +1,23 @@
+{
+   "port": "3001",
+   "adminAccount": "ryan.miao@demo.com",
+   "db": {
+      "servername": "172.18.0.2",
+      "DATABASE": "yapi",
+      "port": "27017",
+      "user": "yapi",
+      "pass": "yapi123456",
+      "authSource":"admin"
+   },
+   "mail": {
+      "enable": false,
+      "host": "smtp.163.com",
+      "port": 465,
+      "from": "***@163.com",
+      "auth": {
+         "user": "***@163.com",
+         "pass": "*****"
+      }
+   }
+}
+
