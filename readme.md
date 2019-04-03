@@ -9,6 +9,8 @@ YApi:  https://github.com/YMFE/yapi/releases
 
 ## 一键启动
 
+
+初始化并启动
 ```
 git clone https://github.com/Ryan-Miao/docker-yapi.git
 cd docker-yapi
@@ -18,6 +20,17 @@ bash start.sh start-mongo
 bash start.sh init-mongo
 bash start.sh init-yapi
 bash start.sh logs-yapi
+```
+
+停止yapi和mongo
+```
+bash start.sh stop
+```
+
+再次启动
+```
+bash start.sh start-mongo
+bash start.sh start-yapi
 ```
 
 
