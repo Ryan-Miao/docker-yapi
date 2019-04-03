@@ -96,13 +96,6 @@ case $1 in
     logs-yapi)
        logs-yapi
        ;;
-    init)
-       init-network
-       start-mongo
-       init-mongo
-       init-yapi
-       logs-yapi
-       ;;
     remove)
         remove
         ;;
