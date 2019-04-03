@@ -1,6 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 set -eo pipefail
-shopt -s nullglob
 
 if [ "$1" = '--initdb' ]; then
         node /api/vendors/server/install.js

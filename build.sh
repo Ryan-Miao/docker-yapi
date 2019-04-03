@@ -5,7 +5,7 @@
  echo "我们将从这里下载：  http://registry.npm.taobao.org/yapi-vendor/download/yapi-vendor-\$1.tgz"
 
 
-version=1.5.7
+version=1.5.10
 
 if [ -n "$1" ]; then
  version=$1
@@ -19,5 +19,5 @@ wget -O yapi.tgz http://registry.npm.taobao.org/yapi-vendor/download/yapi-vendor
 
 echo -e "\033[32m build new image \033[0m"
 
-docker build -t yapi .
-docker tag yapi  yapi:$version
+sudo docker build -t yapi .
+sudo docker tag yapi  yapi:$version

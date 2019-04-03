@@ -1,14 +1,15 @@
-FROM node:11 as builder
+FROM node:11-alpine as builder
 
-RUN apt-get install -y  git python make openssl tar gcc
+COPY repositories /etc/apk/repositories
+RUN apk update && apk add --no-cache  git python make openssl tar gcc
 ADD yapi.tgz /home/
 RUN mkdir /api && mv /home/package /api/vendors
 RUN cd /api/vendors && \
     npm install --production --registry https://registry.npm.taobao.org
 
-FROM node:11
+FROM node:11-alpine
 
-MAINTAINER ryan.miao
+MAINTAINER ryan.miao@nf-3.com
 ENV TZ="Asia/Shanghai" HOME="/"
 WORKDIR ${HOME}
 
