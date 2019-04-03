@@ -9,7 +9,7 @@ RUN cd /api/vendors && \
 
 FROM node:11-alpine
 
-MAINTAINER ryan.miao@nf-3.com
+MAINTAINER Ryan Miao
 ENV TZ="Asia/Shanghai" HOME="/"
 WORKDIR ${HOME}
 
