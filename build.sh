@@ -17,6 +17,12 @@ echo -e "\033[32m download new package (version $1) \033[0m"
 
 wget -O yapi.tgz http://registry.npm.taobao.org/yapi-vendor/download/yapi-vendor-$version.tgz
 
+ if [ $? -ne 0 ]; then
+    echo -e "\033[31m wget下载yapi失败，请确保 wget -O yapi.tgz http://registry.npm.taobao.org/yapi-vendor/download/yapi-vendor-$version.tgz 可以正常运行 \033[0m"
+    return ;
+ fi
+
+
 echo -e "\033[32m build new image \033[0m"
 
 sudo docker build -t yapi .
