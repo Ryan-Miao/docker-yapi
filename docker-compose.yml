@@ -1,0 +1,31 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo:4
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: yapi
+    volumes: 
+        - ./mongo-conf:/docker-entrypoint-initdb.d
+        - ./mongo/etc:/etc/mongo
+        - ./mongo/data/db:/data/db
+    ports: 
+        - 27017:27017
+  yapi:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: yapi
+    # 第一次启动使用
+    command: "yapi server"
+    # 之后使用下面的命令
+    # command: "node /my-yapi/vendors/server/app.js"
+    volumes: 
+        - ./my-yapi:/my-yapi
+    ports: 
+      - 9090:9090
+      - 3000:3000
