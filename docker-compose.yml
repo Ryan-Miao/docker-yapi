@@ -29,3 +29,5 @@ services:
     ports: 
       - 9090:9090
       - 3000:3000
+    depends_on: 
+      - mongo
