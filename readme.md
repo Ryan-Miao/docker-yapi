@@ -106,6 +106,8 @@ docker-compose up -d
 
 已经把yapi部署文件给映射到磁盘了, 该怎么安装就怎么安装.
 
+注意yapi目前处于无人维护状态，源码有一些问题，直接下载安装插件可能失败，具体见 https://www.cnblogs.com/woshimrf/p/13797749.html#_caption_1
+
 ```
 .
 ├── doc
