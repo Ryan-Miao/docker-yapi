@@ -10,6 +10,8 @@ YApi:  https://github.com/YMFE/yapi/releases
 
 1. 初始化db, 开启自定义配置
 
+注意: 首次启动请修改docker-compose文件，取消注释command: "yapi server"，并注释command: "node /my-yapi/vendors/server/app.js"
+
 ```
 git clone https://github.com/Ryan-Miao/docker-yapi.git
 cd docker-yapi
